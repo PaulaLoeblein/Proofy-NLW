@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+div.large-box {
+  min-width: 250px;
+  min-height: 120px;
+  background-color: #adadad;
+  border: 1px solid black; 
+  justify-content: center;
+}
+
+body {
+  justify-content: center;
+  text-align: center;
+  margin-top: 10%;
+}
+
+strong {
+  font: bold 1.75rem Helvetica;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+  margin: 5%;
+  grid-template-areas: "box1 box2 box3"
+}
+
+#box1 {
+  grid-area: box1;
+}
+
+#box2 {
+  grid-area: box2;
+}
+
+#box3 {
+  grid-area: box3;
+}
+
+p {
+  min-width: 100px;
+
+  font: 50 1.25rem Helvetica;
+  border-width: 0px 0px 1px 1px; 
+  border-style: solid;
+  border-bottom-color: black;
+  border-left-color: black;
+  float: right;
+  text-align: center;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+section {
+    font-size: 1rem;
+    text-align: left;
+    padding: 10px;
+    padding-top: 40px;
+    font: 1rem Helvetica;
+}
+
+#chicken {
+    background-color: #f08080;
+}
+
+#beef{
+  color: ivory;
+  background-color: #f73b51;
+
+}
+#sushi{
+  background-color: #dfd880;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 991px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    margin: 5%;
+    grid-template-areas: "box1 box2" 
+    "box3 box3";
+    justify-content: center;
+  }
+
+  #box1 {
+    grid-area: box1;
+  }
+
+  #box2 {
+    grid-area: box2;
+  }
+
+  #box3 {
+    grid-area: box3;
+  }
+
+  p {
+    width: 10%;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 767px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 5%;
+    grid-template-areas: "box1" "box2" "box3";
+    justify-content: center;
+  }
+
+  #box1 {
+    grid-area: box1;
+  }
+
+  #box2 {
+    grid-area: box2;
+  }
+
+  #box3 {
+    grid-area: box3;
+  }
+}
+
+
+
+
+
+
+
+
